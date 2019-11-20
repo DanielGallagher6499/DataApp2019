@@ -24,9 +24,9 @@ class GameItem extends React.Component{
                 <img src={this.props.game.Poster}></img> */}
 
 
-                <Card  border="primary">
-  <Card.Header>{this.props.game.title}</Card.Header>
-  <Card.Body>
+<Card  border="primary">
+<Card.Header>{this.props.game.title}</Card.Header>
+ <Card.Body>
     <blockquote className="blockquote mb-0">
     <img src={this.props.game.poster}></img>
       <footer>

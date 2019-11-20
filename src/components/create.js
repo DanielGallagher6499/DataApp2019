@@ -60,6 +60,7 @@ class Create extends React.Component {
   render() {
     return (
       <div>
+        <img src={"http://spaceglo.cz/wp-content/uploads/2018/03/1920-x-300-banner.jpg"} alt="trending banner" height = "18.52%" width = "100%" />
         <h1>Create Game Post!</h1>
         <h2>Please fill in the following details</h2>
         <form onSubmit={this.handleSubmit}>
@@ -97,14 +98,14 @@ class Create extends React.Component {
         </div>
         <br></br>
         <div className='form-group'>
-          <label>Review</label>
-          <input
-          placeholder='Review'
-          type='text'
+          <label>Game Review</label>
+          <textarea
+          placeholder='Review of this game'
+          row='3'
           className='form-control'
           value={this.state.Review}
           onChange={this.handleGameReviewChange}
-          ></input>
+          ></textarea>
         </div>
         <br></br>
         <div>

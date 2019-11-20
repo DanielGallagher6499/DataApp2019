@@ -19,7 +19,8 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
+        <div className="App"
+        >
           <Navbar bg="dark" variant="dark">
             
           <Navbar.Brand href="/">
@@ -35,8 +36,8 @@ class App extends React.Component {
             
             <Nav className="mr-auto">
               <Nav.Link href="/read">New Posts</Nav.Link>
-              <Nav.Link href="/create">Create a post</Nav.Link>
               <Nav.Link href="/trending">Trending</Nav.Link>
+              <Nav.Link href="/create">Create a post</Nav.Link>
             </Nav>
           </Navbar>
           
