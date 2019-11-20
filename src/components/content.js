@@ -18,7 +18,7 @@ class Content extends React.Component {
         <h3>Run by the community , for the community!</h3>
         <br></br>
         <h3>{new Date().toLocaleTimeString()}</h3>
-        <img src={Banner} alt="website banner" />
+        <img src={Banner} alt="website banner" height = "100%" width = "100%" />
       </div>
     );
   }

@@ -29,7 +29,8 @@ const Schema = mongoose.Schema;
 const gameSchema = new Schema({
     title:String,
     year:String,
-    poster:String
+    poster:String,
+    review:String
 })
 
 const GameModel = mongoose.model('game', gameSchema);
@@ -106,11 +107,13 @@ app.post('/api/games', (req,res)=>{
     console.log(req.body.title);
     console.log(req.body.year);
     console.log(req.body.poster);
+    console.log(req.body.review);
 
     GameModel.create({
         title:req.body.title, 
         year:req.body.year, 
-        poster:req.body.poster
+        poster:req.body.poster,
+        review:req.body.review
     });
 
     res.json('post recieved!');

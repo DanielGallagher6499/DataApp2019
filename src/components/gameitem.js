@@ -11,9 +11,7 @@ class GameItem extends React.Component{
   }
   DeletePost(e){
     console.log("Delete Post");
-
-          axios.post('http://localhost:4000/api/Games/') 
-          axios.delete(''+this.props.game._id)
+          axios.delete('http://localhost:4000/api/Games/'+this.props.game._id)
     .then()
     .catch();
   }
@@ -33,6 +31,8 @@ class GameItem extends React.Component{
     <img src={this.props.game.poster}></img>
       <footer>
       {this.props.game.year}
+      <br></br>
+      {this.props.game.review}
       </footer>
     </blockquote>
   </Card.Body>

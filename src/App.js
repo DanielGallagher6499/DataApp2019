@@ -11,6 +11,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import Create from './components/create';
 import Read from './components/read';
 import Edit from './components/edit';
+import Trending from './components/trending';
 
 
 class App extends React.Component {
@@ -35,6 +36,7 @@ class App extends React.Component {
             <Nav className="mr-auto">
               <Nav.Link href="/read">New Posts</Nav.Link>
               <Nav.Link href="/create">Create a post</Nav.Link>
+              <Nav.Link href="/trending">Trending</Nav.Link>
             </Nav>
           </Navbar>
           
@@ -43,6 +45,7 @@ class App extends React.Component {
             <Route path="/create" component={Create} />
             <Route path="/read" component={Read} />
             <Route path="/edit/:id" component={Edit} />
+            <Route path="/trending" component={Trending} />
           </Switch>
         </div>
       </BrowserRouter>

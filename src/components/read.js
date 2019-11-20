@@ -22,7 +22,7 @@ class Read extends React.Component{
     render(){
         return(
             <div>
-                <img src="https://i.pinimg.com/originals/d2/7a/7c/d27a7c048f9e8cf8c77add494dc64fbc.jpg"alt="website banner" width="1920" height="450" />
+                <img src="https://i.pinimg.com/originals/d2/7a/7c/d27a7c048f9e8cf8c77add494dc64fbc.jpg"alt="website banner" width="100%" height="150" />
                 <h1>Top New Posts!</h1>
                 <Games myGames={this.state.games}></Games>
             </div>

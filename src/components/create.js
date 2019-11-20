@@ -8,12 +8,14 @@ class Create extends React.Component {
 
     this.state = {Title:'',
                   Year:'',
-                Poster:''};
+                  Poster:'',
+                  Review:''};
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGameTitleChange = this.handleGameTitleChange.bind(this);
     this.handleGameYearChange = this.handleGameYearChange.bind(this);
     this.handleGamePosterChange = this.handleGamePosterChange.bind(this);
+    this.handleGameReviewChange = this.handleGameReviewChange.bind(this);
   }
   
   handleGameTitleChange(e){
@@ -28,25 +30,31 @@ class Create extends React.Component {
     this.setState({Poster: e.target.value});
   }
 
+  handleGameReviewChange(e){
+    this.setState({Review: e.target.value});
+  }
+
   handleSubmit(e){
     alert(this.state.Title+ "      " + this.state.Year 
-    +"       "+ this.state.Poster);
+    +"       "+ this.state.Poster+"      " + this.state.Review);
     e.preventDefault();
     
     
                 const newGame = {
                   title: this.state.Title,
                   year: this.state.Year,
-                  poster: this.state.Poster
+                  poster: this.state.Poster,
+                  review: this.state.Review
                 };
           axios.post('http://localhost:4000/api/Games/',newGame) 
           .then()
           .catch();
-          
+                
 
           this.setState({Title:'',
                         Year:'',
-                        Poster:''});    
+                        Poster:'',
+                        Review:''});    
   }
 
   render() {
@@ -86,6 +94,17 @@ class Create extends React.Component {
           value={this.state.Poster}
           onChange={this.handleGamePosterChange}
           ></textarea>
+        </div>
+        <br></br>
+        <div className='form-group'>
+          <label>Review</label>
+          <input
+          placeholder='Review'
+          type='text'
+          className='form-control'
+          value={this.state.Review}
+          onChange={this.handleGameReviewChange}
+          ></input>
         </div>
         <br></br>
         <div>
