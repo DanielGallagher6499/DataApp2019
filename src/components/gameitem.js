@@ -33,6 +33,8 @@ class GameItem extends React.Component{
       {this.props.game.year}
       <br></br>
       {this.props.game.review}
+      <br></br>
+      {this.props.game.rating}
       </footer>
     </blockquote>
   </Card.Body>

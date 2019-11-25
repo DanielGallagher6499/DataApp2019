@@ -30,7 +30,8 @@ const gameSchema = new Schema({
     title:String,
     year:String,
     poster:String,
-    review:String
+    review:String,
+    rating:String
 })
 
 const GameModel = mongoose.model('game', gameSchema);
@@ -90,8 +91,19 @@ app.delete('/api/games/:id',(req,res)=>{
     GameModel.deleteOne({_id:req.params.id},(error,data)=>{
         if(error)
             res.json(error);
-        res.json(data);
+            res.json(data);
     })
+})
+
+app.put('/api/games/:id', (req, res) =>{
+    console.log("Edit: " + req.params.id);
+
+    GameModel.findByIdAndUpdate(req.params.id, 
+        req.body,
+        {new: true},
+        (error, data)=>{
+            res.json(data);
+        })
 })
 
 app.get('/api/games/:id', (req, res)=>{
@@ -108,12 +120,14 @@ app.post('/api/games', (req,res)=>{
     console.log(req.body.year);
     console.log(req.body.poster);
     console.log(req.body.review);
+    console.log(req.body.rating);
 
     GameModel.create({
         title:req.body.title, 
         year:req.body.year, 
         poster:req.body.poster,
-        review:req.body.review
+        review:req.body.review,
+        rating:req.body.rating
     });
 
     res.json('post recieved!');

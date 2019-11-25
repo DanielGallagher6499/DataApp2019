@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  background-image: url(./components/background.jpg);
+  height: 200%;
+  width : 100%;
+  color: Black;
+}
+
+.Home{
+    text-align: center;
+    background-image: url(./components/background.jpg);
+    height: 100vh;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .App-logo {

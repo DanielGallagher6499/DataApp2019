@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { newExpression } from '@babel/types';
+import Logo from './logo.png';
 
 class Create extends React.Component {
   constructor(props){
@@ -9,13 +10,15 @@ class Create extends React.Component {
     this.state = {Title:'',
                   Year:'',
                   Poster:'',
-                  Review:''};
+                  Review:'',
+                  Rating:'',}
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleGameTitleChange = this.handleGameTitleChange.bind(this);
     this.handleGameYearChange = this.handleGameYearChange.bind(this);
     this.handleGamePosterChange = this.handleGamePosterChange.bind(this);
     this.handleGameReviewChange = this.handleGameReviewChange.bind(this);
+    this.handleGameRatingChange = this.handleGameRatingChange.bind(this);
   }
   
   handleGameTitleChange(e){
@@ -34,9 +37,12 @@ class Create extends React.Component {
     this.setState({Review: e.target.value});
   }
 
+  handleGameRatingChange(e){
+    this.setState({Rating: e.target.value});
+  }
+
   handleSubmit(e){
-    alert(this.state.Title+ "      " + this.state.Year 
-    +"       "+ this.state.Poster+"      " + this.state.Review);
+    alert("Your Review Has Been Submitted! Thank you!");
     e.preventDefault();
     
     
@@ -44,7 +50,8 @@ class Create extends React.Component {
                   title: this.state.Title,
                   year: this.state.Year,
                   poster: this.state.Poster,
-                  review: this.state.Review
+                  review: this.state.Review,
+                  rating: this.state.Rating
                 };
           axios.post('http://localhost:4000/api/Games/',newGame) 
           .then()
@@ -54,15 +61,20 @@ class Create extends React.Component {
           this.setState({Title:'',
                         Year:'',
                         Poster:'',
-                        Review:''});    
+                        Review:'',
+                        Rating:''});    
   }
 
   render() {
     return (
-      <div>
-        <img src={"http://spaceglo.cz/wp-content/uploads/2018/03/1920-x-300-banner.jpg"} alt="trending banner" height = "18.52%" width = "100%" />
-        <h1>Create Game Post!</h1>
-        <h2>Please fill in the following details</h2>
+      <div className='Home'>
+        <h1><b><u>Create Game Post!</u></b></h1>
+        <h2>Fill in the following fields to enter a review!</h2>
+        <br></br>
+        <a href="/"><img height = "100" width="100"src={Logo} alt="website logo" /></a>
+        <h3>Click this logo to return home</h3>
+        <br></br>
+        
         <form onSubmit={this.handleSubmit}>
         <div className='form-group'>
           <label>Game Title</label>
@@ -108,10 +120,23 @@ class Create extends React.Component {
           ></textarea>
         </div>
         <br></br>
+        <br></br>
+        <div>
+        <div className='form-group'>
+          <label>Game Rating [Rating/10]</label>
+          <input
+          placeholder='Rating 1-10 (1/10 = Worst - 10/10 = Best)'
+          type='text'
+          className='form-control'
+          value={this.state.Rating}
+          onChange={this.handleGameRatingChange}
+          ></input>
+        </div>
+        </div>
         <div>
           <input
-          type="submit"
-          value="Submit Post">
+            type="submit"
+            value="Submit Post!">
           </input>
         </div>
         </form>

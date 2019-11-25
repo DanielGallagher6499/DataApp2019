@@ -35,9 +35,9 @@ class App extends React.Component {
     </Navbar.Brand>
             
             <Nav className="mr-auto">
-              <Nav.Link href="/read">New Posts</Nav.Link>
-              <Nav.Link href="/trending">Trending</Nav.Link>
-              <Nav.Link href="/create">Create a post</Nav.Link>
+              <Nav.Link href="/trending">Trending Games</Nav.Link>
+              <Nav.Link href="/read">Community Posts</Nav.Link>
+              <Nav.Link href="/create">Create a Review</Nav.Link>
             </Nav>
           </Navbar>
           

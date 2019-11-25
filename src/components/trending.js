@@ -2,17 +2,24 @@ import React from 'react';
 import '../App.css';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import Logo from './logo.png';
 
 class Trending extends React.Component {
 
   render() {
     return (
-      <div >
-        <img src={"http://spaceglo.cz/wp-content/uploads/2018/03/1920-x-300-banner.jpg"} alt="trending banner" height = "18.52%" width = "100%" />
+      /*Top of the site*/
+      <div className='Home'>
+      <a href="/"><img height = "100" width="100"src={Logo} alt="website logo" /></a>
+      <br></br>
+      <h1><b><u>Popular Games Right Now!</u></b></h1>
+      <h1>Click Any Image To Go To Their Official Site!</h1>
+  
+  
   {/*Top three card images on the page*/}
 <CardGroup>
   <Card bg="dark" text="white">
-    <Card.Img variant="callofduty" src="https://soundtracktracklist.com/wp-content/uploads/2019/06/Call-of-Duty-Modern-Warfare-2019-game.jpg"/>
+  <a href="https://www.callofduty.com/modernwarfare"><Card.Img variant="callofduty" src="https://soundtracktracklist.com/wp-content/uploads/2019/06/Call-of-Duty-Modern-Warfare-2019-game.jpg"/></a>
     <Card.Body>
       <Card.Title>Call of Duty : Modern Warfare</Card.Title>
       <Card.Text>
@@ -21,7 +28,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="fifa20" src="https://cdn01.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_EaSportsFifa20NintendoSwitchLegacyEdition_image500w.jpg" />
+    <a href="https://www.ea.com/en-gb/games/fifa/fifa-20?utm_campaign=fifa20_brd_ie_m6_srch_ggl_ltvc1&utm_source=google&utm_medium=search&cid=59904&ts=1568146070921"><Card.Img variant="fifa20" src="https://cdn01.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_EaSportsFifa20NintendoSwitchLegacyEdition_image500w.jpg" /></a>
     <Card.Body>
       <Card.Title>Fifa 20</Card.Title>
       <Card.Text>
@@ -30,7 +37,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="fortnite" src="https://pbs.twimg.com/profile_images/1131354293548847105/9jnZrEU4.png" />
+    <a href="https://www.epicgames.com/fortnite/en-US/home"><Card.Img variant="fortnite" src="https://pbs.twimg.com/profile_images/1131354293548847105/9jnZrEU4.png" /></a>
     <Card.Body>
       <Card.Title>Fortnite</Card.Title>
       <Card.Text>
@@ -42,7 +49,7 @@ class Trending extends React.Component {
 {/*Second row of three card images on the page*/}
 <CardGroup>
 <Card bg="dark" text="white">
-    <Card.Img variant="battlefield" src="https://i1.sndcdn.com/artworks-000353835192-v6a8if-t500x500.jpg"/>
+    <a href="https://www.ea.com/en-gb/games/battlefield/battlefield-5"><Card.Img variant="battlefield" src="https://i1.sndcdn.com/artworks-000353835192-v6a8if-t500x500.jpg"/></a>
     <Card.Body>
       <Card.Title>Battlefield V</Card.Title>
       <Card.Text>
@@ -51,7 +58,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="starwars" src="https://farm5.staticflickr.com/4576/38238908296_4832e757cd.jpg" />
+    <a href="https://www.ea.com/games/starwars/battlefront/star-wars-battlefront-2"><Card.Img variant="starwars" src="https://farm5.staticflickr.com/4576/38238908296_4832e757cd.jpg" /></a>
     <Card.Body>
       <Card.Title>Star Wars : Battlefront</Card.Title>
       <Card.Text>
@@ -60,7 +67,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="nfs heat" src="https://i1.sndcdn.com/artworks-000584824958-3l62nt-t500x500.jpg" />
+    <a href="https://www.ea.com/games/need-for-speed/need-for-speed-heat"><Card.Img variant="nfs heat" src="https://i1.sndcdn.com/artworks-000584824958-3l62nt-t500x500.jpg" /></a>
     <Card.Body>
       <Card.Title>Need For Speed : Heat</Card.Title>
       <Card.Text>
@@ -72,7 +79,7 @@ class Trending extends React.Component {
 {/*Third row of three card images on the page*/}
 <CardGroup>
 <Card bg="dark" text="white">
-    <Card.Img variant="GTSport" src="https://i1.sndcdn.com/artworks-000286279625-4arrqg-t500x500.jpg"/>
+    <a href="https://www.gran-turismo.com/ie/products/gtsport/"><Card.Img variant="GTSport" src="https://i1.sndcdn.com/artworks-000286279625-4arrqg-t500x500.jpg"/></a>
     <Card.Body>
       <Card.Title>Grand Turismo Sport</Card.Title>
       <Card.Text>
@@ -81,7 +88,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="TheWitcher" src="https://i1.sndcdn.com/artworks-000082317473-tqckdp-t500x500.jpg" />
+  <a href="https://thewitcher.com/en/witcher3"><Card.Img variant="TheWitcher" src="https://i1.sndcdn.com/artworks-000082317473-tqckdp-t500x500.jpg" /></a>
     <Card.Body>
       <Card.Title>The Witcher 3: Wild Hunt</Card.Title>
       <Card.Text>
@@ -90,7 +97,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="borderlands" src="http://nerdreactor.com/wp-content/uploads/2019/09/Borderlands-3-500x500_c.jpg" />
+    <a href="https://borderlands.com/en-US/#-"><Card.Img variant="borderlands" src="http://nerdreactor.com/wp-content/uploads/2019/09/Borderlands-3-500x500_c.jpg" /></a>
     <Card.Body>
       <Card.Title>Borderlands 3</Card.Title>
       <Card.Text>
@@ -102,7 +109,7 @@ class Trending extends React.Component {
 {/*Fourth row of three card images on the page*/}
 <CardGroup>
   <Card bg="dark" text="white">
-    <Card.Img variant="Apex" src="https://gamerheadquarters.com/hub/titanfall/apexlegends.jpg"/>
+    <a href="https://www.ea.com/games/apex-legends"><Card.Img variant="Apex" src="https://gamerheadquarters.com/hub/titanfall/apexlegends.jpg"/></a>
     <Card.Body>
       <Card.Title>Apex Legends</Card.Title>
       <Card.Text>
@@ -111,7 +118,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="Madden" src="https://icdn6.digitaltrends.com/image/madden-20-patrick-mahomes-thumg-500x500.jpg" />
+    <a href="https://www.ea.com/games/madden-nfl/madden-nfl-20"><Card.Img variant="Madden" src="https://icdn6.digitaltrends.com/image/madden-20-patrick-mahomes-thumg-500x500.jpg" /></a>
     <Card.Body>
       <Card.Title>Madden 20</Card.Title>
       <Card.Text>
@@ -120,7 +127,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="reddead" src="https://i1.sndcdn.com/artworks-000466512579-cp7kvl-t500x500.jpg" />
+    <a href="https://www.rockstargames.com/reddeadredemption2/restricted-content/agegate/form?redirect=https%3A%2F%2Fwww.rockstargames.com%2Freddeadredemption2%2Fpc&options=&locale=en_us"><Card.Img variant="reddead" src="https://i1.sndcdn.com/artworks-000466512579-cp7kvl-t500x500.jpg" /></a>
     <Card.Body>
       <Card.Title>Red Dead Redemption 2</Card.Title>
       <Card.Text>
@@ -132,7 +139,7 @@ class Trending extends React.Component {
 {/*Fifth row of three card images on the page*/}
 <CardGroup>
   <Card bg="dark" text="white">
-    <Card.Img variant="forza" src="https://nerdreactor.com/wp-content/uploads/2018/06/Forza-Horizon-4-500x500_c.jpg"/>
+    <a href="https://forzamotorsport.net/en-us/games/fh4"><Card.Img variant="forza" src="https://nerdreactor.com/wp-content/uploads/2018/06/Forza-Horizon-4-500x500_c.jpg"/></a>
     <Card.Body>
       <Card.Title>Forza Horizon 4</Card.Title>
       <Card.Text>
@@ -141,7 +148,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="hitman" src="https://i1.sndcdn.com/artworks-000467743146-fqrtj7-t500x500.jpg" />
+    <a href="https://www.hitman.com/"><Card.Img variant="hitman" src="https://i1.sndcdn.com/artworks-000467743146-fqrtj7-t500x500.jpg" /></a>
     <Card.Body>
       <Card.Title>Hitman 2</Card.Title>
       <Card.Text>
@@ -150,7 +157,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="PUBG" src="https://blocktribune.com/wp-content/uploads/2019/07/PUBG.jpg" />
+    <a href="https://www.pubg.com/"><Card.Img variant="PUBG" src="https://blocktribune.com/wp-content/uploads/2019/07/PUBG.jpg" /></a>
     <Card.Body>
       <Card.Title>Player Unknown's Battlegrounds</Card.Title>
       <Card.Text>
@@ -162,7 +169,7 @@ class Trending extends React.Component {
 {/*Sixth row of three card images on the page*/}
 <CardGroup>
   <Card bg="dark" text="white">
-    <Card.Img variant="xplane" src="https://steamuserimages-a.akamaihd.net/ugc/915797707425207906/F4C524D5517465DA3726D37C939956BE3BF0CF71/"/>
+    <a href="https://www.x-plane.com/"><Card.Img variant="xplane" src="https://steamuserimages-a.akamaihd.net/ugc/915797707425207906/F4C524D5517465DA3726D37C939956BE3BF0CF71/"/></a>
     <Card.Body>
       <Card.Title>X-Plane 11</Card.Title>
       <Card.Text>
@@ -171,7 +178,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="spiderman" src="https://howlongtobeat.com/gameimages/44852_Spider-Man_(2017).jpg" />
+    <a href="https://www.playstation.com/en-us/games/marvels-spider-man-ps4/"><Card.Img variant="spiderman" src="https://howlongtobeat.com/gameimages/44852_Spider-Man_(2017).jpg" /></a>
     <Card.Body>
       <Card.Title>Marvel's Spider-Man</Card.Title>
       <Card.Text>
@@ -180,7 +187,7 @@ class Trending extends React.Component {
     </Card.Body>
   </Card>
   <Card bg="dark" text="white">
-    <Card.Img variant="assasins" src="https://i1.sndcdn.com/artworks-000426951480-g8l9wn-t500x500.jpg" />
+    <a href="https://assassinscreed.ubisoft.com/game/en-us/home"><Card.Img variant="assasins" src="https://i1.sndcdn.com/artworks-000426951480-g8l9wn-t500x500.jpg" /></a>
     <Card.Body>
       <Card.Title>Assassin's Creed Odyssey</Card.Title>
       <Card.Text>
