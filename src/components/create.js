@@ -68,18 +68,21 @@ class Create extends React.Component {
   render() {
     return (
       <div className='Home'>
+        {/*Top text of the page*/}
         <h1><b><u>Create Game Post!</u></b></h1>
         <h2>Fill in the following fields to enter a review!</h2>
         <br></br>
+        {/*Website logo that when once clicked bring you to the home page / content page*/}
         <a href="/"><img height = "100" width="100"src={Logo} alt="website logo" /></a>
         <h3>Click this logo to return home</h3>
         <br></br>
-        
+                
+        {/*Area for Game title to be entered - this section has a placeholder test and takes input and saves it*/}
         <form onSubmit={this.handleSubmit}>
         <div className='form-group'>
           <label>Game Title</label>
           <input
-          placeholder='Game Title'
+          placeholder='Game Title' 
           type='text'
           className='form-control'
           value={this.state.Title}
@@ -87,6 +90,8 @@ class Create extends React.Component {
           ></input>
         </div>
         <br></br>
+
+        {/*Area for Game release year to be entered - this section has a placeholder test and takes input and saves it*/}
         <div className='form-group'>
           <label>Year Of Release</label>
           <input
@@ -98,6 +103,8 @@ class Create extends React.Component {
           ></input>
         </div>
         <br></br>
+
+        {/*Area for poster URL to be entered - this section has a placeholder test and takes a poster URL and displays is on read when called*/}
         <div className='form-group'>
           <label>Poster Url</label>
           <textarea
@@ -109,6 +116,8 @@ class Create extends React.Component {
           ></textarea>
         </div>
         <br></br>
+
+        {/*Area for Game Review to be entered - thus section has a placeholder test and takes text input and saves it*/}
         <div className='form-group'>
           <label>Game Review</label>
           <textarea
@@ -122,6 +131,8 @@ class Create extends React.Component {
         <br></br>
         <br></br>
         <div>
+
+        {/*Area for Game rating to be entered - this section has a placeholder test and takes input and saves it of the rating*/}
         <div className='form-group'>
           <label>Game Rating [Rating/10]</label>
           <input
@@ -133,6 +144,8 @@ class Create extends React.Component {
           ></input>
         </div>
         </div>
+
+        {/*This is a button that once clicked will post the review and content submitted to the server*/}
         <div>
           <input
             type="submit"

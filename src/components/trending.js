@@ -15,7 +15,7 @@ class Trending extends React.Component {
       <h1><b><u>Popular Games Right Now!</u></b></h1>
       <h1>Click Any Image To Go To Their Official Site!</h1>
   
-  
+  {/*This secrion of code is hard coded games on the trending page including clickable images to game pages - a href being the link the image takes you to*/}
   {/*Top three card images on the page*/}
 <CardGroup>
   <Card bg="dark" text="white">

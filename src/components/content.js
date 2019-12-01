@@ -9,14 +9,16 @@ class Content extends React.Component {
   render() {
     return (
       <div className="Home">
+        {/*Top text on the opening page*/}
         <br></br>
         <h1>Welcome to GameSpot!</h1>
         <br></br>
+        {/*Image logo in the center of the page*/}
         <img height = "329" width="329"src={Logo} alt="website logo" />
         <h3><u>PC Parts We Recommend! Click an image to see!</u></h3>
 
 
-
+{/*Image carosusel which when clicked takes you to the site - a href being the link to the page*/}
 <Carousel>
     <Carousel.Item>
     <a href="https://www.zotac.com/"><img
@@ -49,7 +51,7 @@ class Content extends React.Component {
     </Carousel.Item>
   </Carousel>
 
-        
+        {/*Bottom section of the website under the carousel*/}
         <br></br>
         <h1>GameSpot - The Community Run Gaming Site!</h1>
         <h3>The best community run application to see all of the best games out right now!</h3>
