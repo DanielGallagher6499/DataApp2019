@@ -84,7 +84,13 @@ class Edit extends React.Component{
 
     render(){
       return (
+        
         <div className='Home'>
+
+          <h1>Welcome To The Edit Page!</h1>
+          <h3>Please fill in the fields you would like to edit and press submit!</h3>
+          <a href="/"><img height = "100" width="100"src={Logo} alt="website logo" /></a>
+
           <form onSubmit={this.handleSubmit}>
 
             <div className="form-group">
